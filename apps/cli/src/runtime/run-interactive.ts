@@ -606,6 +606,7 @@ export async function runInteractive(
 				let chatCommandResult = await runInteractiveChatCommand({
 					prompt: input,
 					enabled: enableChatCommands,
+					delivery,
 					config,
 					host: workspaceResources?.getChatCommandHost() ?? chatCommandHost,
 					chatCommandState,
@@ -628,6 +629,7 @@ export async function runInteractive(
 					chatCommandResult = await runInteractiveChatCommand({
 						prompt: input,
 						enabled: enableChatCommands,
+						delivery,
 						config,
 						host: workspaceResources.getChatCommandHost(),
 						chatCommandState,
